@@ -11,3 +11,9 @@ def form(request):
 def products(request):
     return render(request,"product.html" )
 
+def sproducts(request):
+    return render(request,"sproduct.html" )
+
+def about(request):
+    return render(request,"about.html" )
+
