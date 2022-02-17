@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,16 +8,20 @@
       src="https://kit.fontawesome.com/64d58efce2.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="../static/css/form.css" />
+    <link rel="stylesheet" href="{% static 'css/form.css' %}" />
     <title>Optica</title>
-    <link rel="icon" href="../static/images/optica.svg" type="image/icon type">
+    <link rel="icon" href="{% static 'images/icon.png' %}" type="image/icon type">
   </head>
   <body>
     <div class="container">
       <div class="forms-container" >
         <div class="signin-signup">
+
+          {% comment %} Login Section {% endcomment %}
+          
           <form action="#" class="sign-in-form">
-            <img src="../static/images/optica.svg" class="logo1" alt=""/>
+            {% csrf_token %}
+            <img src="{% static 'images/optica.svg' %}" class="logo1" alt=""/>
             <h2 class="title1">Sign in</h2>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
@@ -26,7 +31,7 @@
               <i class="fas fa-lock"></i>
               <input type="password" placeholder="Password" />
             </div>
-            <input class="btn solid" type="submit" value="Login" />
+            <button type="submit" name="login" value="Log In">Log In </button>
             <p class="social-text">Or Sign in with social platforms</p>
             <div class="social-media">
               <a href="#" class="social-icon">
@@ -43,27 +48,39 @@
               </a>
             </div>
           </form>
-          <form action="#" class="sign-up-form">
-            <img src="../static/images/optica.svg" class="logo2" alt=""/>
+
+          {% comment %} Sign Up Section {% endcomment %}
+          <form action="#" class="sign-up-form" method="POST" >
+            {% csrf_token %}
+            <img src="{% static 'images/optica.svg' %}" class="logo2" alt=""/>
 
             <h2 class="title2">Sign up</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Full Name" />
+              {{form.first_name}}
+            </div>
+    
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              {{form.last_name}}
+            </div>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              {{form.username}}
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" />
+              {{form.email}}
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              {{form.password1}}
             </div>
             <div class="input-field">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Confirm Password" />
+                {{form.password2}}
               </div>
-            <input type="submit" class="btn" value="Sign up" />
+            <button type="submit" name="register" >Sign Up </button>
             <p class="social-text">Or Sign up with social platforms</p>
             <div class="social-media">
               <a href="#" class="social-icon">
@@ -93,7 +110,7 @@
             </p>
             <button class="btn transparent" id="sign-up-btn">Sign up</button>
           </div>
-          <img src="../static/images/login.svg" class="image" alt="" />
+          <img src="{% static 'images/login.svg' %}" class="image" alt="" />
         </div>
         <div class="panel right-panel">
           <div class="content">
@@ -104,10 +121,10 @@
             </p>
             <button class="btn transparent" id="sign-in-btn">Sign in</button>
           </div>
-          <img src="../static/images/register.svg" class="image" alt="image1" />
+          <img src="{% static 'images/register.svg' %}" class="image" alt="image1" />
         </div>
       </div>
     </div>
-    <script src="../static/form.js"></script>
+    <script src="{% static 'form.js' %}"></script>
   </body>
 </html>
