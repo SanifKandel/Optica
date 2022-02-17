@@ -100,13 +100,11 @@ p{
 
 }
 
-#navbar li a:hover,
-#navbar li a:active{
+#navbar li a:hover {
   color: #1e9eee;
 
 }
 
-#navbar li a:active::after,
 #navbar li a:hover::after{
   content: " ";
   width: 30%;

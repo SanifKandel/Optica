@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta http-equiv="refresh" content="2" > -->
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../static/css/home.css" />
+    <link rel="stylesheet" href="../static/css/product.css" />
+    <link rel="stylesheet" href="../static/css/cart.css" />
+
+    <title>Home</title>
+    <link rel="icon" href="../static/images/optica.svg" type="image/icon type">
+    
+  </head>
+  <body>
+        <section id="header">
+          <a href="#"><img src="../static/images/optica.svg" class="logo" alt="" /></a>
+
+          <div>
+            <ul id="navbar">
+              <li><a  href="/">Home</a></li>
+              <li><a  href="/products">Products</a></li>
+              <li><a  href="/about">About</a></li>
+              <li><a class="active"href="/contactus">Contact</a></li> 
+              <li id="lg-bag"><a href="/cart"><i class="fa fa-shopping-bag"></i></a></li>
+              <li><a href="/form">Login/SignUp</a></li> 
+              <a href="#" id="close"><i class="fa fa-times"></i></a>
+            </ul>
+          </div>
+          <div id ="mobile">
+            <a href="cart.html"><i class="fa fa-shopping-bag"></i></a>
+            <a href="#" id ="bar"></a><i class = "fas fa-outdent"></i></a>
+            
+
+          </div>
+        </section>
+
+        <section id="product-banner">
+            <h2>Let's make this shades yours</h2>
+            <p>Quickly checkout from below to claim your product.</p>
+        </section>
+
+        <section id="cart" class="section-p1">
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <td>REMOVE</td>
+                        <td>Image</td>
+                        <td>Product</td>
+                        <td>Price</td>
+                        <td>Quantity</td>
+                        <td>Subtotal</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                        <td><img src="../static/images/glass5.png" alt=""></td>
+                        <td>Carbon Chasma</td>
+                        <td>Rs.500</td>
+                        <td><input type="number" value="1"></td>
+                        <td>Rs.500</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                        <td><img src="../static/images/glass6.png" alt=""></td>
+                        <td>Carbon Chasma</td>
+                        <td>Rs.500</td>
+                        <td><input type="number" value="1"></td>
+                        <td>Rs.500</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                        <td><img src="../static/images/glass7.png" alt=""></td>
+                        <td>Carbon Chasma</td>
+                        <td>Rs.500</td>
+                        <td><input type="number" value="1"></td>
+                        <td>Rs.500</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+        <section id="cart-add" class="section-p1">
+            <div id="coupon">
+                <h3>Apply Coupon</h3>
+                <div>
+                    <input type="text" placeholder="Enter Your Coupon">
+                    <button>Apply</button>
+                </div>
+            </div>
+
+                <div id="subtotal">
+                    <h3>Cart Totals</h3>
+                    <table>
+                        <tr>
+                            <td>Cart Subtotal</td>
+                            <td>Rs.500</td>
+                        </tr>
+                        <tr>
+                            <td>Shipping</td>
+                            <td>Free</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Total</strong></td>
+                            <td><strong>Rs.1000</strong></td>
+                        </tr>
+                    </table>
+                    <button class="checkout">Checkout</button>
+                </div>
+
+
+            </div>
+        </section>
+
+
+    
+
+
+        <section id="newsletter" class="section-p1 section-m1">
+          <div class="newstext">
+            <h4>Sign Up for Newsletters</h4>
+            <p>Get E-mail Updates about our latest shop and <span>special offers.</span></p>
+          </div>
+          <div class="newsletter-form">
+            <input type="text" placeholder="Your email address">
+            <button>Sign Up</button>
+
+          </div>
+
+        </section>
+
+
+    <script src="../static/product.js"></script>
+  </body>
+  </html>

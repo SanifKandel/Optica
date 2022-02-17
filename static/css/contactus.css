@@ -1,0 +1,163 @@
+#contactdetails{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+#contactdetails .details{
+    width:40%;
+}
+
+#contactdetails .details span,
+#formdetails form span{
+    font-size:14px;  
+}
+
+#contactdetails .details h2,
+#formdetails form h2{
+    font-size:26px;  
+    line-height:35px;
+    padding: 20px 0;
+}
+
+
+#contactdetails .details h3{
+    font-size:18px;
+    padding-bottom: 15px;
+}
+
+#contactdetails .details li{
+    list-style: none;
+    display:flex;
+    padding: 10px 0;
+    align-items:center;
+}
+#contactdetails .details li i{
+    font-size:14px;
+    padding-right: 22px; 
+}
+
+#contactdetails .details li p{
+    margin: 0;
+    font-size:14px;
+}
+
+#contactdetails .map{
+    width: 55%;
+    height: 400px;
+}
+
+#contactdetails .map iframe{
+    width: 100%;
+    height: 100%;
+}
+
+#formdetails{
+    display: flex;
+    justify-content: space-around;
+    margin: 30px;
+    padding:80px;
+    border: 1px solid #e1e1e1;
+}
+#formdetails form{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+}
+
+#formdetails form input,
+#formdetails form textarea{
+    width: 100%;
+    padding: 12px 15px;
+    outline: none;
+    margin-bottom: 20px;
+   border: 1px solid #e1e1e1;
+
+}
+
+#formdetails button{
+    width: 150px;
+    height: 49px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #088178;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+  
+  #formdetails button:hover {
+    
+    background-color: #fff;
+    color: #088178;
+    border: 1px solid #088178;
+  }
+
+  #formdetails .people div {
+      padding-bottom: 25px;
+      display:flex;
+      align-items:flex-start;
+  }
+
+  #formdetails .people div img{
+      width:65px;
+      height:65px;
+      object-fit:cover;
+      margin-right: 15px;
+  }
+
+  #formdetails .people div p{
+      margin:0;
+      font-size: 13px;
+      line-height:25px;
+      
+  }
+
+  #formdetails .people div span{
+      display: block;
+      font-size: 16px;
+      font-weight: 600;
+      color: #000;
+  }
+
+  @media (max-width: 799px) {
+
+    #formdetails {
+        padding: 40px;
+    }
+
+    #formdetails form{
+        width: 50%;
+    }
+  }
+
+  @media (max-width: 477px) {
+      #contactdetails{
+          flex-direction: column;
+      }
+
+      #contactdetails .details{
+          width: 100%;
+          margin-bottom: 30px;
+      }
+ 
+      #contactdetails .map{
+          width: 100%;
+      }
+
+      #formdetails{
+          margin:10px;
+          padding: 30px 10px;
+          flex-wrap: wrap;
+      }
+      #formdetails form{
+          width: 100%;
+          margin-bottom: 30px;
+      }
+  }
