@@ -17,19 +17,20 @@
         <div class="forms-container" >
         <div class="signin-signup">
             
-            <form action="#" class="sign-in-form" method="POST">
+            <form class="sign-in-form" method="POST">
               {% csrf_token %}
               <img src="{% static 'images/optica.svg' %}" class="logo1" alt=""/>
               <h2 class="title1">Sign in</h2>
               <div class="input-field">
                 <i class="fas fa-envelope"></i>
-                <input type="email" placeholder="Email" />
+                <input name="username" type="text" placeholder="Username" />
               </div>
               <div class="input-field">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Password" />
+                <input name="password" type="password" placeholder="Password" />
               </div>
-              <button type="submit" name="login" value="Log In">Log In </button>
+              <button type="submit" value="Log In">Log In </button>
+            </form>
               <p class="social-text">Or Sign in with social platforms</p>
               <div class="social-media">
                 <a href="#" class="social-icon">
@@ -45,7 +46,7 @@
                   <i class="fab fa-linkedin-in"></i>
                 </a>
               </div>
-            </form>
+            
             </div>
             </div>
 
@@ -57,7 +58,9 @@
                   <p>
                     Let's join fill a quick registration form and join with us in the journey of "Shades".
                   </p>
-                  <button class="btn transparent" id="sign-up-btn">Sign up</button>
+                  <form action="/register">
+                  <button class="btn transparent" id="sign-up-btn" >Sign up</button>
+                  </form>
                 </div>
                 <img src="{% static 'images/login.svg' %}" class="image" alt="" />
               </div>

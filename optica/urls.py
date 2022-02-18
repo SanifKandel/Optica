@@ -17,6 +17,8 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import include, path
 from django.conf.urls.static import static
+import login.views as loginview
+import cart.views as cartview
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,7 +27,9 @@ urlpatterns = [
     path('product/', include('product.urls')),
     path('', include('cart.urls')),
     path('', include('login.urls')),
-    path('', include('register.urls'))
+    path('', include('register.urls')),
+    path('logout',loginview.logoutUser, name='logout'),
+    path('addCart/',cartview.addToCart, name="addCart")
 
 
 ]
