@@ -1,0 +1,67 @@
+
+{% load static %}
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+      <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+      <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+      <link rel="stylesheet" href="{% static 'css/product.css' %}" />
+      <link rel="stylesheet" href="{% static 'css/cart.css' %}" />
+      <link rel="stylesheet" href="{% static 'css/contactus.css' %}" />
+      <link rel="stylesheet" href="{% static 'css/about.css' %}" />
+      <title>Optica</title>
+      <link rel="icon" href="{% static 'images/optica.svg' %}" type="image/icon type">
+  </head>
+  <body>
+    
+    <section id="header">
+        <a href="#"><img src="{% static 'images/optica.svg' %}" class="logo" alt="" /></a>
+    
+        <div>
+          <ul id="navbar">
+            <li><a class="active" href="/">Home</a></li>
+            <li><a href="/product">Products</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contactus">Contact</a></li> 
+            <li id="lg-bag"><a href="/cart"><i class="fa fa-shopping-bag"></i></a></li>
+            <li><a href="{% url 'register' %}">Login/SignUp</a></li> 
+            
+            <a href="#" id="close"><i class="fa fa-times"></i></a>
+          </ul>
+        </div>
+        <div id ="mobile">
+          <a href="cart.html"><i class="fa fa-shopping-bag"></i></a>
+          <a href="#" id ="bar"></a><i class = "fas fa-outdent"></i></a>
+          
+    
+        </div>
+      </section> 
+      <div class="container-base">
+        {% block body %}
+        {% endblock %}
+        
+      </div>
+
+      <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+          <h4>Sign Up for Newsletters</h4>
+          <p>Get E-mail Updates about our latest shop and <span>special offers.</span></p>
+        </div>
+        <div class="newsletter-form">
+          <input type="text" placeholder="Your email address">
+          <button>Sign Up</button>
+
+        </div>
+
+      </section>
+
+      <script src="{% static 'home.js' %}"></script>
+  </body>
+  </html>

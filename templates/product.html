@@ -1,40 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <meta http-equiv="refresh" content="2" > -->
-    <script
-      src="https://kit.fontawesome.com/64d58efce2.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="../static/css/home.css" />
-    <link rel="stylesheet" href="../static/css/product.css" />
-    <title>Home</title>
-    <link rel="icon" href="../static/images/optica.svg" type="image/icon type">
-  </head>
-  <body>
-        <section id="header">
-          <a href="#"><img src="../static/images/optica.svg" class="logo" alt="" /></a>
-
-          <div>
-            <ul id="navbar">
-              <li><a  href="/">Home</a></li>
-              <li><a class="active" href="/products">Products</a></li>
-              <li><a href="/about">About</a></li>
-              <li><a href="/contactus">Contact</a></li> 
-              <li id="lg-bag"><a href="/cart"><i class="fa fa-shopping-bag"></i></a></li>
-              <li><a href="/form">Login/SignUp</a></li> 
-              <a href="#" id="close"><i class="fa fa-times"></i></a>
-            </ul>
-          </div>
-          <div id ="mobile">
-            <a href="cart.html"><i class="fa fa-shopping-bag"></i></a>
-            <a href="#" id ="bar"></a><i class = "fas fa-outdent"></i></a>
-            
-
-          </div>
-        </section>
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
 
         <section id="product-banner">
         <h2>Order from Home</h2>
@@ -43,364 +9,41 @@
 
  
 
-        <section id="product1" class="section-p1">
-
-          <div class="prod-container">
-            <div class="prod">
-              <img src="../static/images/glass1.png" alt=" ">
-              <div class="des">
-                <span>Chasmaa</span>
-                <h5>Waterproof Glass</h5>
-                <div class="star">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h4>Rs.400</h4>
-                </div>
-                <a href="#"><i  class="fa fa-shopping-cart "></i></a>
-            </div>
-          
-
-          
-            <div class="prod">
-              <img src="../static/images/glass2.png" alt=" ">
-              <div class="des">
-                <span>Chasmaa</span>
-                <h5>Waterproof Glass</h5>
-                <div class="star">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h4>$4.00</h4>
-                </div>
-                <a href="#"><i  class="fa fa-shopping-cart "></i></a>
-            </div>
-          
-
-          
-            <div class="prod">
-              <img src="../static/images/glass3.png" alt=" ">
-              <div class="des">
-                <span>Chasmaa</span>
-                <h5>Waterproof Glass</h5>
-                <div class="star">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h4>$4.00</h4>
-                </div>
-                <a href="#"><i  class="fa fa-shopping-cart "></i></a>
-            </div>
-          
-
-         
-            <div class="prod">
-              <img src="../static/images/glass4.png" alt=" ">
-              <div class="des">
-                <span>Chasmaa</span>
-                <h5>Waterproof Glass</h5>
-                <div class="star">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h4>$4.00</h4>
-                </div>
-                <a href="#"><i  class="fa fa-shopping-cart "></i></a>
-            </div>
-  
-
-          
-            <div class="prod">
-              <img src="../static/images/glass5.png" alt=" ">
-              <div class="des">
-                <span>Chasmaa</span>
-                <h5>Waterproof Glass</h5>
-                <div class="star">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h4>$4.00</h4>
-                </div>
-                <a href="#"><i  class="fa fa-shopping-cart "></i></a>
-            </div>
-          
-
-         
-            <div class="prod">
-              <img src="../static/images/glass6.png" alt=" ">
-              <div class="des">
-                <span>Chasmaa</span>
-                <h5>Waterproof Glass</h5>
-                <div class="star">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h4>$4.00</h4>
-                </div>
-                <a href="#"><i  class="fa fa-shopping-cart "></i></a>
-            </div>
-         
-
-          
-            <div class="prod">
-              <img src="../static/images/glass7.png" alt=" ">
-              <div class="des">
-                <span>Chasmaa</span>
-                <h5>Waterproof Glass</h5>
-                <div class="star">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h4>$4.00</h4>
-                </div>
-                <a href="#"><i  class="fa fa-shopping-cart "></i></a>
-            </div>
-          
-
-          <div class="prod">
-            <img src="../static/images/glass1.png" alt=" ">
-            <div class="des">
-              <span>Chasmaa</span>
-              <h5>Waterproof Glass</h5>
-              <div class="star">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-              <h4>$4.00</h4>
-              </div>
-              <a href="#"><i  class="fa fa-shopping-cart "></i></a>
+    <section id="product1" class="section-p1">
+      <h2>Featured Products</h2>
+      <p>Summer Collection of Sun Glasses</p>
+      <div class="prod-container">
+        {% for Products in ProductsCat %}
+      <div class="prod">
+        <img src="{{Products.image.url}}" alt=" ">
+        <div class="des">
+          <span>{{Products.brand}}</span>
+          <h5>{{Products.name}}</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
           </div>
-       
-          <div class="prod-container">
-            <div class="prod">
-              <img src="../static/images/glass7.png" alt=" ">
-              <div class="des">
-                <span>Chasmaa</span>
-                <h5>Waterproof Glass</h5>
-                <div class="star">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h4>$4.00</h4>
-                </div>
-                <a href="#"><i  class="fa fa-shopping-cart "></i></a>
-            </div>
-          
-
-          
-            <div class="prod">
-              <img src="../static/images/glass6.png" alt=" ">
-              <div class="des">
-                <span>Chasmaa</span>
-                <h5>Waterproof Glass</h5>
-                <div class="star">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h4>$4.00</h4>
-                </div>
-                <a href="#"><i  class="fa fa-shopping-cart "></i></a>
-            </div>
-          
-
-          
-            <div class="prod">
-              <img src="../static/images/glass5.png" alt=" ">
-              <div class="des">
-                <span>Chasmaa</span>
-                <h5>Waterproof Glass</h5>
-                <div class="star">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h4>$4.00</h4>
-                </div>
-                <a href="#"><i  class="fa fa-shopping-cart "></i></a>
-            </div>
-          
-
-         
-            <div class="prod">
-              <img src="../static/images/glass4.png" alt=" ">
-              <div class="des">
-                <span>Chasmaa</span>
-                <h5>Waterproof Glass</h5>
-                <div class="star">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h4>$4.00</h4>
-                </div>
-                <a href="#"><i  class="fa fa-shopping-cart "></i></a>
-            </div>
-  
-
-          
-            <div class="prod">
-              <img src="../static/images/glass3.png" alt=" ">
-              <div class="des">
-                <span>Chasmaa</span>
-                <h5>Waterproof Glass</h5>
-                <div class="star">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h4>$4.00</h4>
-                </div>
-                <a href="#"><i  class="fa fa-shopping-cart "></i></a>
-            </div>
-          
-
-         
-            <div class="prod">
-              <img src="../static/images/glass2.png" alt=" ">
-              <div class="des">
-                <span>Chasmaa</span>
-                <h5>Waterproof Glass</h5>
-                <div class="star">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h4>$4.00</h4>
-                </div>
-                <a href="#"><i  class="fa fa-shopping-cart "></i></a>
-            </div>
-         
-
-          
-            <div class="prod">
-              <img src="../static/images/glass1.png" alt=" ">
-              <div class="des">
-                <span>Chasmaa</span>
-                <h5>Waterproof Glass</h5>
-                <div class="star">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <h4>$4.00</h4>
-                </div>
-                <a href="#"><i  class="fa fa-shopping-cart "></i></a>
-            </div>
-          
-
-          <div class="prod">
-            <img src="../static/images/glass3.png" alt=" ">
-            <div class="des">
-              <span>Chasmaa</span>
-              <h5>Waterproof Glass</h5>
-              <div class="star">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-              <h4>$4.00</h4>
-              </div>
-              <a href="#"><i  class="fa fa-shopping-cart "></i></a>
+          <h4>Rs.{{Products.price}}</h4>
           </div>
-        </div>
-        
+          <!-- <input type="number" value="1"> -->
+          <a href="#"><i  class="fa fa-shopping-cart"></i></a>
+      </div>
+    {% endfor %}
+    </div>
 
-          
+    </section>
 
 
-        </section>
 
+
+    </section>
         <section id="pagination" class="section-p1">
           <a href= "#">1</a>
           <a href= "#">2</a>
           <a href= "#"><i class="fa fa-long-arrow-alt-right"></i></a>
         </section>
-        
 
 
-        <section id="newsletter" class="section-p1 section-m1">
-          <div class="newstext">
-            <h4>Sign Up for Newsletters</h4>
-            <p>Get E-mail Updates about our latest shop and <span>special offers.</span></p>
-          </div>
-          <div class="newsletter-form">
-            <input type="text" placeholder="Your email address">
-            <button>Sign Up</button>
-
-          </div>
-
-        </section>
-
-
-         <!-- <section id="footer">
-         <div class="col1">
-           <img src="../static/images/optica.svg" class="logo" alt="" />
-           <div class="followus">
-           <h4>Follow Us</h4>
-            <i class="fa fa-facebook-f"></i>
-            <i class="fa fa-instagram"></i>
-            <i class="fa fa-twitter"></i>
-           </div>
-          </div>
-          
-         <div class="col2">
-         <h4>Contact</h4>
-         <p> <strong>Address</strong> : Kathmandu, Nepal</p>
-         <p> <strong>Email</strong> : sanifkandel12345@gmail.com</p>
-         <p> <strong>Phone No.</strong> : 9864400812</p>
-        </div>
-
-       </section>
-
-       <section id="copyright">
-        <div class="cup">
-          <p>© Optica 2021, Inc. All rights reserved.</p>
-        </div>
-       </section> -->
-
-        
-
-
-    <script src="../static/product.js"></script>
-  </body>
-  </html>
+    {% endblock %}

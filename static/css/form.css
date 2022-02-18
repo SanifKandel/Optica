@@ -107,7 +107,8 @@ form.sign-up-form {
   font-weight: 500;
 }
 
-.btn {
+.sign-up-form .button,
+.sign-in-form .button {
   width: 150px;
   height: 49px;
   border: none;

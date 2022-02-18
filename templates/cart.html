@@ -1,43 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <meta http-equiv="refresh" content="2" > -->
-    <script
-      src="https://kit.fontawesome.com/64d58efce2.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="../static/css/home.css" />
-    <link rel="stylesheet" href="../static/css/product.css" />
-    <link rel="stylesheet" href="../static/css/cart.css" />
-
-    <title>Home</title>
-    <link rel="icon" href="../static/images/optica.svg" type="image/icon type">
-    
-  </head>
-  <body>
-        <section id="header">
-          <a href="#"><img src="../static/images/optica.svg" class="logo" alt="" /></a>
-
-          <div>
-            <ul id="navbar">
-              <li><a  href="/">Home</a></li>
-              <li><a  href="/products">Products</a></li>
-              <li><a  href="/about">About</a></li>
-              <li><a class="active"href="/contactus">Contact</a></li> 
-              <li id="lg-bag"><a href="/cart"><i class="fa fa-shopping-bag"></i></a></li>
-              <li><a href="/form">Login/SignUp</a></li> 
-              <a href="#" id="close"><i class="fa fa-times"></i></a>
-            </ul>
-          </div>
-          <div id ="mobile">
-            <a href="cart.html"><i class="fa fa-shopping-bag"></i></a>
-            <a href="#" id ="bar"></a><i class = "fas fa-outdent"></i></a>
-            
-
-          </div>
-        </section>
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
 
         <section id="product-banner">
             <h2>Let's make this shades yours</h2>
@@ -118,24 +81,4 @@
             </div>
         </section>
 
-
-    
-
-
-        <section id="newsletter" class="section-p1 section-m1">
-          <div class="newstext">
-            <h4>Sign Up for Newsletters</h4>
-            <p>Get E-mail Updates about our latest shop and <span>special offers.</span></p>
-          </div>
-          <div class="newsletter-form">
-            <input type="text" placeholder="Your email address">
-            <button>Sign Up</button>
-
-          </div>
-
-        </section>
-
-
-    <script src="../static/product.js"></script>
-  </body>
-  </html>
+  {% endblock %}
