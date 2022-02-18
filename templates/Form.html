@@ -17,7 +17,7 @@
       <div class="forms-container" >
         <div class="signin-signup">
 
-          {% comment %} Login Section {% endcomment %}
+          {% comment %} Login Section
           
           <form action="#" class="sign-in-form" method="POST">
             {% csrf_token %}
@@ -47,7 +47,7 @@
                 <i class="fab fa-linkedin-in"></i>
               </a>
             </div>
-          </form>
+          </form> {% endcomment %}
 
           {% comment %} Sign Up Section {% endcomment %}
           <form action="#" class="sign-up-form" method="POST" >
@@ -101,7 +101,7 @@
       </div>
 
       <div class="panels-container">
-        <div class="panel left-panel">
+        {% comment %} <div class="panel left-panel">
             
           <div class="content">
             <h3>New here ?</h3>
@@ -111,7 +111,7 @@
             <button class="btn transparent" id="sign-up-btn">Sign up</button>
           </div>
           <img src="{% static 'images/login.svg' %}" class="image" alt="" />
-        </div>
+        </div> {% endcomment %}
         <div class="panel right-panel">
           <div class="content">
             <h3>One of us ?</h3>
