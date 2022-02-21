@@ -16,8 +16,12 @@
       <link rel="stylesheet" href="{% static 'css/cart.css' %}" />
       <link rel="stylesheet" href="{% static 'css/contactus.css' %}" />
       <link rel="stylesheet" href="{% static 'css/about.css' %}" />
+      <link rel="stylesheet" href="{% static 'css/checkout.css' %}" />
       <title>Optica</title>
       <link rel="icon" href="{% static 'images/optica.svg' %}" type="image/icon type">
+      <style>
+    
+      </style>
   </head>
   <body>
     
@@ -27,12 +31,12 @@
         <div>
           <ul id="navbar">
             <li><a class="active" href="/">Home</a></li>
-            <li><a href="/product">Products</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contactus">Contact</a></li> 
+            <li><a href="{% url 'productDisplay' %}">Products</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'contactus' %}">Contact</a></li> 
             {% if user.is_authenticated %}
-            <li id="lg-bag"><a href="/cart"><i class="fa fa-shopping-bag"></i></a></li>
-            <li><a href="">{{user.username}}</a></li> 
+            <li id="lg-bag"><a href="{% url 'cartIndex' %}"><i class="fa fa-shopping-bag"></i></a></li>
+            <li><a href="" class="displayname">{{user.username}}</a></li> 
             <li><a href="{% url 'logout' %}">Log Out</a></li> 
             {% else %}
             <li><a href="{% url 'login' %}">Login/SignUp</a></li> 

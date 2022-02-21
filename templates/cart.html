@@ -19,32 +19,20 @@
                         <td>Subtotal</td>
                     </tr>
                 </thead>
+                {% for item in items %}
                 <tbody>
+                  
                     <tr>
-                        <td><a href="#"><i class="far fa-times-circle"></i></a></td>
-                        <td><img src="../static/images/glass5.png" alt=""></td>
-                        <td>Carbon Chasma</td>
-                        <td>Rs.500</td>
-                        <td><input type="number" value="1"></td>
-                        <td>Rs.500</td>
-                    </tr>
-                    <tr>
-                        <td><a href="#"><i class="far fa-times-circle"></i></a></td>
-                        <td><img src="../static/images/glass6.png" alt=""></td>
-                        <td>Carbon Chasma</td>
-                        <td>Rs.500</td>
-                        <td><input type="number" value="1"></td>
-                        <td>Rs.500</td>
-                    </tr>
-                    <tr>
-                        <td><a href="#"><i class="far fa-times-circle"></i></a></td>
-                        <td><img src="../static/images/glass7.png" alt=""></td>
-                        <td>Carbon Chasma</td>
-                        <td>Rs.500</td>
-                        <td><input type="number" value="1"></td>
-                        <td>Rs.500</td>
+                        <td><a href="{% url 'cartIndex' %}"><i data-product="{{item.product.id}}" data-action="deleteItem" class="far fa-times-circle addToCart"></i></a></td>
+                        <td><img src="{{item.product.image.url}}" alt=""></td>
+                        <td>{{item.product.name}}</td>
+                        <td>{{item.product.price}}</td>
+                        {% comment %} <td><input type="number" class="border" value="{{item.quantity}}"></td> {% endcomment %}
+                        <td><button>-</button> <input type="text" class="border" value="{{item.quantity}}"><button>+</button> </td>
+                        <td>{{item.get_item_total}}</td>
                     </tr>
                 </tbody>
+                {% endfor %}
             </table>
 
         </section>
@@ -63,21 +51,23 @@
                     <table>
                         <tr>
                             <td>Cart Subtotal</td>
-                            <td>Rs.500</td>
+                            <td>Rs {{order.get_orderTotal}}</td>
                         </tr>
                         <tr>
                             <td>Shipping</td>
-                            <td>Free</td>
+                            <td>Rs 150</td>
                         </tr>
                         <tr>
                             <td><strong>Total</strong></td>
-                            <td><strong>Rs.1000</strong></td>
+                            <td><strong>Rs {{order.get_TotalWith_Shipping}}</strong></td>
                         </tr>
                     </table>
+                    <form action="/checkout">
                     <button class="checkout">Checkout</button>
+                    <form>
+                      
                 </div>
-
-
+                
             </div>
         </section>
 

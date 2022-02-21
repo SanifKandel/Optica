@@ -1,0 +1,40 @@
+{% extends 'baseadmin.html' %}
+{% load static %}
+{% block body %}
+
+      <h1 class='d-flex justify-content-center'>All orders</h1>
+    <button class='btn btn-primary'>Add Product</button>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Order No.</th>
+          <th scope="col">User</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Order Date</th>
+          <th scope="col">Update</th>
+          <th scope="col">Delete</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        {% for i in orderitems %}
+        <tr>
+          <th scope="row">{{ i.order.id }}</th>
+          <td>{{ i.order.user_details.username}}</td>
+          <td>{{ i.quantity}}</td>
+          <td>{{ i.date_added }}</td>
+          <td><button class='btn btn-success'>Update Order</button></td>
+          <form method='post' action='/deleteOrder/'>
+            {% csrf_token %}
+            <input type='hidden' value={{i.order.id}} name=''>
+          <td><button class='btn btn-danger'>Delete Order</button></td>
+          </form>
+        </tr>
+        {% endfor %}
+ 
+      </tbody>
+    </table>
+
+    {% endblock %}
+
+ 

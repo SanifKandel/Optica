@@ -1,0 +1,38 @@
+{% extends 'baseadmin.html' %}
+{% load static %}
+{% block body %}
+
+      <h1 class='d-flex justify-content-center'>Products</h1>
+      <form action='{% url 'productadd'%}'>
+    <button class='btn btn-primary'>Add Products</button>
+      </form>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Product ID</th>
+          <th scope="col">Brand</th>
+          <th scope="col">Product Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Update</th>
+          <th scope="col">Delete</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        {% for i in allProducts %}
+        <tr>
+          <th scope="row">{{ i.id }}</th>
+          <td>{{ i.brand }}</td>
+          <td>{{ i.name }}</td>
+          <td>{{ i.price }}</td>
+          <td><button class='btn btn-success'>Update Order</button></td>
+          <td><button class='btn btn-danger'>Delete Order</button></td>
+        </tr>
+        <tr> 
+          {% endfor %}
+      </tbody>
+    </table>
+
+    {% endblock %}
+
+ 

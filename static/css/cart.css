@@ -29,8 +29,12 @@
     text-align: center;   
 }
 
+#cart table td:nth-child(5) button{
+    color: #1e9eee;
+}
+
 #cart table td:nth-child(5) input{
-    width: 70px;
+    width: 40px;
     padding: 10px 5px 10px 15px;
 }
 

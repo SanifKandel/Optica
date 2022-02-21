@@ -4,6 +4,7 @@ from django.urls.conf import include
 from . import views
 
 urlpatterns = [
+        path('displayproduct/',views.product,name="productDisplay")
 
 
 ]

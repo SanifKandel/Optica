@@ -22,6 +22,7 @@ for(let i=0; i < cartUpdate.length; i++){
 
     .then((data) => {
         console.log('data:', data)
+        location.reload()
     })
     })
 

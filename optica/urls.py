@@ -25,11 +25,13 @@ urlpatterns = [
     # path('', include('opticals.urls')),
     path('', include('home.urls')),
     path('product/', include('product.urls')),
-    path('', include('cart.urls')),
+    path('cart/', include('cart.urls')),
     path('', include('login.urls')),
     path('', include('register.urls')),
+    path('', include('checkout.urls')),
+    path('customadmin/', include('admin.urls')),
     path('logout',loginview.logoutUser, name='logout'),
-    path('addCart/',cartview.addToCart, name="addCart")
+    path('addCart/',cartview.addToCart, name="addCart"),
 
 
 ]

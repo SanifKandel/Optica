@@ -20,6 +20,8 @@ def addToCart(request):
     product = data['product']
     action = data['action']
 
+    print(action)
+
     customer = request.user
     product = Products.objects.get(id=product)
     order, created = Order.objects.get_or_create(user_details = customer,  completed=False)
@@ -32,6 +34,7 @@ def addToCart(request):
         orderItem.quantity = (orderItem.quantity - 1)
     elif action == 'deleteItem':
         orderItem.quantity = 0
+
     orderItem.save()
 
 
@@ -41,6 +44,22 @@ def addToCart(request):
     # return redirect ('index')
 
     return JsonResponse('HREER', safe=False)
+
+def viewCart(request):
+    print("ENTERED VIEWCART")
+    customer = request.user
+    order, created = Order.objects.get_or_create(user_details = customer, completed=False)
+    items = order.ordereditems_set.all()
+    print(items)
+    context={
+        'items':items,
+        'order':order,
+        
+    }
+    return render(request, 'cart.html', context)
+
+
+
 
 
 

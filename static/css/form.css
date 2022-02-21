@@ -66,6 +66,8 @@ form.sign-up-form {
   opacity: 0;
 }
 
+
+
 .title {
   font-size: 2.2rem;
   color: #444;
@@ -107,8 +109,22 @@ form.sign-up-form {
   font-weight: 500;
 }
 
-.sign-up-form .button,
-.sign-in-form .button {
+.sign-in-form .loginbtn{
+  width: 150px;
+  height: 49px;
+  border: none;
+  outline: none;
+  border-radius: 48px;
+  cursor: pointer;
+  background-color: #87cefa;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+  transition: all 0.5s;
+
+}
+.sign-in-form .registerbtn {
   width: 150px;
   height: 49px;
   border: none;

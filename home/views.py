@@ -13,10 +13,4 @@ def index(request):
     
     return render(request, 'Home.html',context)
 
-def product(request):
-    ProductsCat = Products.objects.all()
 
-    context={
-        'ProductsCat':ProductsCat
-    }
-    return render(request, 'product.html',context)

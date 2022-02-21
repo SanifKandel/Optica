@@ -1,0 +1,41 @@
+{% extends 'baseadmin.html' %}
+{% load static %}
+{% block body %}
+
+      <h1 class='d-flex justify-content-center'>Users</h1>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Cart ID </th>
+          <th scope="col">Full Name</th>
+          <th scope="col">Product Name</th>
+          <th scope="col">Phone No.</th>
+          <th scope="col">Update</th>
+          <th scope="col">Delete</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">5</th>
+          <td>Sanif Kandel</td>
+          <td>Blue Glasses</td>
+          <td>9867634674</td>
+          <td><button class='btn btn-success'>Update Order</button></td>
+          <td><button class='btn btn-danger'>Delete Order</button></td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>Ramesh Kumar</td>
+          <td>Green Shades</td>
+          <td>987634674</td>
+          <td><button class='btn btn-success'>Update Order</button></td>
+          <td><button class='btn btn-danger'>Delete Order</button></td>
+        </tr>
+        
+      </tbody>
+    </table>
+
+    {% endblock %}
+
+ 
