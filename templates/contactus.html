@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+       
+        <section id="product-banner">
+            <h2>Let's Connect</h2>
+            <p>Leave a message. We'd love to hear from you </p>
+        </section>
+
+        <section id="contactdetails" class="section-p1">
+            <div class="details">
+                <span>GET IN TOUCH</span>
+                <h2>Visit one of our Optica Store or contact us today.</h2>
+                <h3>Head Office</h3>
+                <div>
+                    <li>
+                        <i class="far fa-map"></i>
+                        <p>Gyaneshwor-32,Kathmandu,Nepal</p>
+                    </li>
+                    <li>
+                        <i class="far fa-envelope"></i>
+                        <p>optica@info.com</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-phone-alt"></i>
+                        <p>+977-01445678</p>
+                    </li>
+                    <li>
+                        <i class="far fa-clock"></i>
+                        <p>Sunday to Friday: 9:00 AM to 5:00 PM</p>
+                    </li>
+                </div>
+            </div>
+
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.3608383751666!2d85.32779051478735!3d27.70614313215225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190a74aa1f23%3A0x74ebef82ad0e5c15!2sSoftwarica%20College%20of%20IT%20%26%20E-Commerce!5e0!3m2!1sen!2snp!4v1645038579727!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+        </section>
+        
+        <section id="formdetails">
+            <form action="#" method="">
+                <span>LEAVE A MESSAGE</span>
+                <h2>WE love to hear from you</h2>
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Email">
+                <input type="text" placeholder="Subject">
+                <textarea name="subject" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                <button>Submit</button>
+
+            </form>
+
+            <div class="people">
+                <div>
+                    <img src="{% static 'images/people.png' %}" alt="">
+                    <p><span>Sanif Kandel</span> CEO, Lenskart<br>Phone: 986757463 <br>Email:sanif@demo.com </p>
+                </div>
+                <div>
+                    <img src="{% static 'images/people.png' %}" alt="">
+                    <p><span>Sanif Kandel</span> CEO, Lenskart<br>Phone: 986757463 <br>Email:sanif@demo.com </p>
+                </div>
+                <div>
+                    <img src="{% static 'images/people.png' %}" alt="">
+                    <p><span>Sanif Kandel</span> CEO, Lenskart<br>Phone: 986757463 <br>Email:sanif@demo.com </p>
+                </div>
+            </div>
+        </section>
+
+
+        {% endblock %}

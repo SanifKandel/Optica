@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+        <section id="banner">
+        <h4>किन्ने हैन त ?</h4>
+        <h2>Super Shades deals</h2>
+        <h1>On all Products</h1>
+        <p>Save more with coupons upto 80% as well</p>
+        <button onclick="window.location.href='/product';" type="button">Shop Now</button>
+
+    </section>
+
+        <section id ="features" class="section-p1">
+
+          <div class="fe-box">
+            <img src="../static/images/freeshipping.jpg"  alt=" ">
+            <h6>Free Shipping</h6>
+          </div>
+          <div class="fe-box">
+            <img src="../static/images/freeshipping.jpg" alt=" ">
+            <h6>Free Shipping</h6>
+          </div>
+          <div class="fe-box">
+            <img src="../static/images/freeshipping.jpg" alt=" ">
+            <h6>Free Shipping</h6>
+          </div>
+          <div class="fe-box">
+            <img src="../static/images/freeshipping.jpg" alt=" ">
+            <h6>Free Shipping</h6>
+          </div>
+
+        </section>
+
+        <section id="product1" class="section-p1">
+          <h2>Featured Products</h2>
+          <p>Summer Collection of Sun Glasses</p>
+          <div class="prod-container">
+            {% for featured in featuredProducts %}
+          <div class="prod">
+            <img src="{{featured.product.image.url}}" alt=" ">
+            <div class="des">
+              <span>{{featured.product.brand}}</span>
+              <h5>{{featured.product.name}}</h5>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <h4>Rs.{{featured.product.price}}</h4>
+              </div>
+              <!-- <input type="number" value="1"> -->
+              <a href="#"><i  data-product="{{featured.product.id}}" data-action="add" class="fa fa-shopping-cart addToCart"></i></a>
+          </div>
+        {% endfor %}
+        </div>
+
+        </section>
+
+
+        <section id="calltoAction"class="section-m1" >
+          <h4>Repair Services</h4>
+          <h2>Up to <span> 50% Off</span>-All shades and glasses.</h2>
+          <button onclick="window.location.href='/product';" type="button">See our Products</button>
+
+
+        </section>
+
+        <section id="ads" >
+          <div class="ad-box">
+            <h2>SEASONAL SALE</h2>
+            <h3>Black Friday -70% OFF</h3>
+
+          </div>
+          <div class="ad-box">
+            <h2>SEASONAL SALE</h2>
+            <h3>Black Friday -70% OFF</h3>
+
+          </div>
+          <div class="ad-box">
+            <h2>SEASONAL SALE</h2>
+            <h3>Black Friday -70% OFF</h3>
+
+          </div>
+
+        </section>
+
+        {% endblock %}
+
+

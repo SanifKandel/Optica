@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+<div class="container">
+
+    <form action="{% url 'saveshippingdetails' %}" method="post" >
+        {% csrf_token %}
+        <div class="row">
+            <div class="col">
+                <h3 class="title">billing address</h3>
+
+                <div class="inputBox">
+                    <input name="orderid" class="hide" type="text" value="{{ order.id }}">
+                    <span>full name :</span>
+                    <input name="full_name" type="text" placeholder="Sanif Kandel">
+                </div>
+                <div class="inputBox">
+                    <span>email :</span>
+                    <input name="email" type="email" placeholder="sanifkandel@gmail.com">
+                </div>
+                <div class="inputBox">
+                    <span>address :</span>
+                    <input name="address" type="text" placeholder="Room -Street - Locality">
+                </div>
+                <div class="inputBox">
+                    <span>city :</span>
+                    <input name="city" type="text" placeholder="Kathmandu">
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>state :</span>
+                        <input name="state" type="text" placeholder="Lumbini">
+                    </div>
+                    <div class="inputBox">
+                        <span>zip code :</span>
+                        <input name="postalcode" type="text" placeholder="123 456">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col">
+
+                <h3 class="title">payment</h3>
+
+                <div class="inputBox">
+                    <span>We also accept:</span>
+                    <img src="{% static 'images/esewa.png' %}" alt="">
+                </div>
+                <div class="inputBox">
+                    <span>Phone Number:</span>
+                    <input name="phone" type="text" placeholder="9864400812">
+                </div>
+
+            </div>
+    
+        </div>
+
+        <input type="submit" value="Place My Order" class="submit-btn">
+
+    </form>
+
+</div>    
+{% endblock %}
